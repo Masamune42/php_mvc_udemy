@@ -2,16 +2,8 @@
 require_once "Livre.class.php";
 require_once "LivreManager.class.php";
 
-$l1 = new Livre(1, "Algorithmique selon H2PROG", 300, "algo.png");
-$l2 = new Livre(2, "Le virus Asiatique", 200, "virus.png");
-$l3 = new Livre(3, "La France du 19ème", 100, "france.png");
-$l4 = new Livre(4, "Le JavaScript Client", 500, "JS.png");
-
 $livreManager = new LivreManager;
-$livreManager->ajoutLivre($l1);
-$livreManager->ajoutLivre($l2);
-$livreManager->ajoutLivre($l3);
-$livreManager->ajoutLivre($l4);
+$livreManager->chargementLivres();
 
 ob_start()
 ?>
